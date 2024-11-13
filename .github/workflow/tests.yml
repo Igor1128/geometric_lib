@@ -1,5 +1,5 @@
 name: Tests and Linting
-
+run-name: Tests and Linting
 on: [push]
   # push:
   #   branches:

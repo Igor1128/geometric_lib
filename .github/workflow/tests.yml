@@ -1,15 +1,15 @@
 name: Tests and Linting
 
-on:
-  push:
-    branches:
-      - master
-      - release
-  pull_request:
-    branches:
-      - master
-      - release
-      - develop
+on: [push]
+  # push:
+  #   branches:
+  #     - master
+  #     - release
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - release
+  #     - develop
 
 jobs:
   tests:

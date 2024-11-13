@@ -15,13 +15,13 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     env:
-      ФИО: "Авруцкий Игорь Алексеевич"
-      НОМЕР_ГРУППЫ: "М3111"
+      SNP: "Авруцкий Игорь Алексеевич"
+      GROUP_NUMBER: "M3111"
     steps:
       - name: Print Information
         run: |
-          echo "ФИО: ${{ env.ФИО }}"
-          echo "Номер группы: ${{ env.НОМЕР_ГРУППЫ }}"
+          echo "ФИО: ${{ env.SNP }}"
+          echo "Номер группы: ${{ env._GROUP_NUMBER }}"
           echo "Ник на Github: ${{ github.actor }}"
       - name: Set up Python
         uses: actions/setup-python@v4

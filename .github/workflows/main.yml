@@ -18,6 +18,10 @@ jobs:
       SNP: "Авруцкий Игорь Алексеевич"
       GROUP_NUMBER: "M3111"
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          ref: feat/tests
       - name: Print Information
         run: |
           echo "ФИО: ${{ env.SNP }}"
@@ -28,7 +32,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Install Dependencies
-        run: pip install -r ../../requirements.txt
+        run: pip install -r requirements.txt
       - name: Run Tests
         run: python -m unittest discover tests
         if: ${{ failure() }}

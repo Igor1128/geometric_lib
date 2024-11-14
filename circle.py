@@ -1,10 +1,15 @@
 import math
 
 
-def area(r):
-    return math.pi * r * r
+def area(radius):
+    """Вычисляет площадь круга."""
+    if radius < 0:
+        raise ValueError("Invalid circle radius")
+    return math.pi * radius * radius
 
 
-def perimeter(r):
-    return 2 * math.pi * r
-
+def perimeter(radius):
+    """Вычисляет периметр круга."""
+    if radius < 0:
+        raise ValueError("Invalid circle radius")
+    return 2 * math.pi * radius
